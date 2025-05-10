@@ -121,45 +121,61 @@
   .site-footer {
     text-align: center;
     padding: 20px;
-    background: #222;
+   
     color: white;
   }
   
-  ..scroller {
+  .tech-scroller {
     overflow: hidden;
-    white-space: nowrap;
     width: 100%;
+    
+    padding: 1rem 0;
   }
   
-  .scroller-inner {
+  .tech-scroller-inner {
     display: inline-flex;
-    gap: 2rem;
-    animation: scroll 20s linear infinite;
+    gap: 4rem;
+    animation: scroll-left 25s linear infinite;
   }
   
-  .scroller-item {
-    font-size: 2rem;
-    font-weight: bold;
-    color: rgb(24, 15, 15);
-    text-transform: uppercase;
+  .tech-item {
+    flex: 0 0 auto;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    position: relative;
   }
   
-  .scroller-item img {
-    height: 40px;
+  .tech-item img {
+    height: 60px;
     width: auto;
-    filter: brightness(0) invert(1);
+    filter: brightness(1) invert(0);
+    transition: transform 0.3s ease;
   }
   
-  /* Add the keyframes */
-  @keyframes scroll {
+  .tech-item:hover img {
+    transform: scale(1.4);
+    filter: brightness(1) invert(0);
+  }
+  
+  @keyframes scroll-left {
     0% {
       transform: translateX(0%);
     }
     100% {
-      transform: translateX(-100%);
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Optional: responsive adjustments */
+  @media (max-width: 768px) {
+    .tech-scroller-inner {
+      gap: 1.5rem;
+    }
+  
+    .tech-item img {
+      height: 40px;
     }
   }
   
