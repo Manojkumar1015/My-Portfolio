@@ -122,60 +122,46 @@
     text-align: center;
     padding: 20px;
    
-    color: white;
+    color: rgb(17, 16, 16);
   }
   
   .tech-scroller {
     overflow: hidden;
-    width: 100%;
+    width: 100vw;
+    padding: 50px;
     
-    padding: 1rem 0;
   }
   
   .tech-scroller-inner {
     display: inline-flex;
-    gap: 4rem;
+    width: fit-content;
     animation: scroll-left 25s linear infinite;
   }
   
   .tech-item {
     flex: 0 0 auto;
+    padding: 0 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s ease;
-    position: relative;
   }
   
   .tech-item img {
     height: 60px;
     width: auto;
-    filter: brightness(1) invert(0);
     transition: transform 0.3s ease;
   }
   
   .tech-item:hover img {
-    transform: scale(1.4);
-    filter: brightness(1) invert(0);
+    transform: scale(1.3);
   }
   
   @keyframes scroll-left {
     0% {
-      transform: translateX(0%);
+      transform: translateX(0);
     }
     100% {
       transform: translateX(-50%);
-    }
-  }
-  
-  /* Optional: responsive adjustments */
-  @media (max-width: 768px) {
-    .tech-scroller-inner {
-      gap: 1.5rem;
-    }
-  
-    .tech-item img {
-      height: 40px;
     }
   }
   
