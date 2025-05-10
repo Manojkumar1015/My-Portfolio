@@ -125,3 +125,41 @@
     color: white;
   }
   
+  ..scroller {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+  
+  .scroller-inner {
+    display: inline-flex;
+    gap: 2rem;
+    animation: scroll 20s linear infinite;
+  }
+  
+  .scroller-item {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(24, 15, 15);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .scroller-item img {
+    height: 40px;
+    width: auto;
+    filter: brightness(0) invert(1);
+  }
+  
+  /* Add the keyframes */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
