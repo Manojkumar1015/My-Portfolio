@@ -1,125 +1,58 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ManojKumar Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-
-  
-  <header class="site-header">
-    <div class="container">
-      <h1 class="logo">Manoj Kumar</h1>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+<body class="loading">
+    <div>
+    <div id="preloader">
+    <div class="loader"></div>
+    </div>
+  <section>
+    <nav class="navbar">
+        <div class="logo">My portfolio</div>
+        <div class="menu-toggle" id="menu-toggle"></div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="navlinks" id="navlinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <h2>Hello, I'm Manoj Kumar 👋</h2>
-      <p>I’m a passionate web developer who loves to build user-friendly websites.</p>
-      <a href="#projects" class="btn">View My Work</a>
-    </div>
+    </nav>
   </section>
-
-  
-  <section id="about" class="section about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>I'm a front-end developer with a love for clean design and intuitive UX. I enjoy solving problems and learning new technologies.</p>
-    </div>
-    <div class="tech-scroller">
-      <div class="tech-scroller-inner">
-        <div class="tech-item" title="HTML5">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
-        </div>
-        <div class="tech-item" title="CSS3">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
-        </div>
-        <div class="tech-item" title="JavaScript">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
-        </div>
-        <div class="tech-item" title="React">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
-        </div>
-        <div class="tech-item" title="Node.js">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />
-        </div>
-        <div class="tech-item" title="Python">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
-        </div>
-        <!-- Repeat for loop effect -->
-        <div class="tech-item" title="HTML5">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
-        </div>
-        <div class="tech-item" title="CSS3">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
-        </div>
-        <div class="tech-item" title="JavaScript">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
-        </div>
-        <div class="tech-item" title="React">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
-        </div>
-        <div class="tech-item" title="Node.js">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />
-        </div>
-        <div class="tech-item" title="Python">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
-        </div>
+  <section id="home">
+    <div id="typing">
+        <h1>Hi,Im Manojkumar</h1>
+        <p class="typein">Im a Python Developer</p>
+        <p>hi</p>
+      
+      <div class="image-right" id="image-wrapper">
+        <img src="Mano .png" alt="Manojkumar" />
       </div>
-  </section>
-
-  
- 
-  <section id="projects" class="section projects">
-    <div class="container">
-      <h2>Projects</h2>
-
-      <div class="project-card">
-        <h3>Personal Blog</h3>
-        <p>A minimalist blog built with HTML, CSS, and JavaScript. Mobile-friendly and easy to update.</p>
-        <a href="#">View Project</a>
-      </div>
-
-      <div class="project-card">
-        <h3>To-Do App</h3>
-        <p>Simple task manager app using localStorage to save tasks. Built using vanilla JS.</p>
-        <a href="#">View Project</a>
-      </div>
-
     </div>
   </section>
-
-  
-  <section id="contact" class="section contact">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>If you'd like to connect, feel free to reach out!</p>
-      <form id="contact-form">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </section>
-  
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 John Doe. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+  <section id="about" class="about-section">
+  <div class="about-container">
+    <h2>About Me</h2>
+    <p>
+      Hi! I'm <strong>Manojkumar</strong>, a passionate and results-driven <strong>Python Full Stack Developer</strong> with a strong background in both front-end and back-end technologies. I specialize in building responsive web applications that are fast, secure, and user-friendly.
+    </p>
+    <p>
+      My core stack includes <strong>Python, Django, Flask, JavaScript, React</strong>, and modern HTML/CSS. I enjoy solving complex problems, writing clean and scalable code, and constantly learning new tools to stay up to date with the tech industry.
+    </p>
+    <p>
+      Whether it's developing RESTful APIs, managing databases, or designing intuitive user interfaces, I thrive in full-stack environments and love turning ideas into functional, polished products.
+    </p>
+  </div>
+</section>
+    
+    <script src="script.js"></script>     
 </body>
 </html>
