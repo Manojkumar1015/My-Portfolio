@@ -161,6 +161,7 @@ h1 {
   font-size: 2.6rem;
   animation: logoEntrance 3s ease forwards;
   color: white;
+  box-shadow: #00f0ff;
 }
 
 #typing {
@@ -171,7 +172,7 @@ h1 {
 }
 
 .image-right {
-  margin: 15rem;
+  margin: 18rem;
   margin-top: 0%;
   padding-left: 10px;
   position: absolute;
@@ -188,7 +189,7 @@ h1 {
 #image-wrapper {
   width: 300px;
   height: 400px;
-  perspective: 1000px;
+  perspective: 900px;
  
 }
 
@@ -206,10 +207,44 @@ h1 {
   box-shadow: 0 30px 60px rgb(160, 11, 240);
 }
 
-.about-section { 
+.image-left {
+  margin-top: 45%;
+  margin-right: 60rem;
+  position: absolute;
+  top: 20vh;
+  right: 5vw;
+  max-width: 25vw;
+}
 
-  padding: 200px ;
+.image-left img {
+  cursor: pointer;
+
+}
+
+#image-wrapper1 {
+  width: 300px;
+  height: 400px;
+  perspective: 900px;
+ 
+}
+
+#image-wrapper1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+#image-wrapper1 img:hover {
+  transform:translateY(-5px);
+  box-shadow: 0 30px 60px rgb(160, 11, 240);
+}
+
+.about-section { 
   display: flex;
+  padding: 200px ;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -218,12 +253,10 @@ h1 {
 
 .about-container {
   max-width: 800px;
-  margin: auto;
-  padding-left: ;
   padding: 40px;
-  background-color: #ffffff;
+  margin-left: 30rem;
   border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -246,7 +279,7 @@ h1 {
   height: 3px;
   background: #00adb5;
   margin: 10px auto 0;
-  border-radius: 2px;
+  background: fixed;
 }
 
 .about-container p {
@@ -261,8 +294,6 @@ h1 {
 }
 
 
-
-/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   body {
     font-size: 14px;
@@ -290,14 +321,14 @@ h1 {
     overflow: hidden;
     width: fit-content;
     border-right: 6px solid rgb(128, 124, 124);
-    animation: fadeInType 3s ease-in-out, typing 5s steps(50, start) forwards infinite alternate, blink 1s ease-in-out infinite;
+    animation: fadeInType 2s ease-in-out, typing 5s steps(50, start) forwards infinite alternate, blink 1s ease-in-out infinite;
 }
-
 
   .image-right {
     position: relative;
     top: auto;
     right: auto;
+    margin-bottom: 1rem;
     margin: 2rem auto;
     margin-bottom: 0;
     text-align: center;
@@ -305,7 +336,7 @@ h1 {
   }
 
   #image-wrapper {
-    width: 100%;
+    width: auto;
     height: auto;
   }
 
@@ -318,6 +349,18 @@ h1 {
     top: 70px;
     right: 10px;
     width: 200px;
+  }
+
+   .about-section {
+    padding: 80px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-container {
+    padding: 20px;
+    width: 100%;
+    margin: auto;
   }
 }
 
@@ -337,7 +380,6 @@ h1 {
   }
 }
 
-/* Animations */
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -377,7 +419,7 @@ h1 {
 
 @keyframes typing {
   from { width: 0; }
-  to { width: 20ch; }
+  to { width: 17.3ch; }
 }
 
 @keyframes blink {

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   console.log("DOM loaded, showing loader...");
 
-  // Simulate a delay (like loading time)
+
   setTimeout(() => {
     console.log("Hiding loader, showing content...");
 
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (preloader) preloader.style.display = "none";
 
     document.body.classList.remove("loading");
-  }, 500); // 1.5 seconds delay
+  }, 500);
 });
 
 
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   hamburger.addEventListener('click', toggleMenu);
-  overlay.addEventListener('click', toggleMenu); // Close when clicking outside
+  overlay.addEventListener('click', toggleMenu); 
 });
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -39,8 +39,30 @@ window.addEventListener('DOMContentLoaded', () => {
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
 
-    const rotateX = ((y - centerY) / centerY) * -11; // up/down tilt
-    const rotateY = ((x - centerX) / centerX) * 11;  // left/right tilt
+    const rotateX = ((y - centerY) / centerY) * -11; 
+    const rotateY = ((x - centerX) / centerX) * 11;  
+
+    img.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  });
+
+  wrapper.addEventListener("mouseleave", () => {
+    img.style.transform = "rotateX(0deg) rotateY(0deg)";
+  });
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  const wrapper = document.getElementById("image-wrapper1");
+  const img = wrapper.querySelector("img");
+
+  wrapper.addEventListener("mousemove", (e) => {
+    const rect = wrapper.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rotateX = ((y - centerY) / centerY) * -11; 
+    const rotateY = ((x - centerX) / centerX) * 11;  
 
     img.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
   });
