@@ -12,12 +12,19 @@ html {
 body {
   animation-fill-mode: forwards;
   font-size: 16px;
-  background-color: black;
-  background-repeat: initial;
+  background-color: #0d0d0d;
+  color: #e0e0e0; 
   font-family: "Rubik", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+body{
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 #preloader {
@@ -208,11 +215,10 @@ h1 {
 }
 
 .image-left {
-  margin-top: 45%;
-  margin-right: 60rem;
+  margin: 42rem;
   position: absolute;
   top: 20vh;
-  right: 5vw;
+  right: 20vw;
   max-width: 25vw;
 }
 
@@ -248,7 +254,6 @@ h1 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #fff200;
 }
 
 .about-container {
@@ -256,7 +261,7 @@ h1 {
   padding: 40px;
   margin-left: 30rem;
   border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 40px rgba(121, 34, 179, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -292,6 +297,82 @@ h1 {
 .about-container strong {
   color: #00adb5;
 }
+
+/* Project Section Styling */
+.project-section {
+  padding: 8px 40px;
+  background:none;
+  text-align: center;
+}
+
+.project-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+/* Card Layout */
+.project-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 5rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Individual Card Styling */
+.project-card {
+  background-color: black;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(121, 34, 179, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(160, 11, 240);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Card Content */
+.card-content {
+  padding: 1.2rem;
+}
+
+.card-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #00adb5;
+}
+
+.card-content p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+/* Link/Button */
+.card-content a {
+  text-decoration: none;
+  color: white;
+  background-color: #00adb5;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.card-content a:hover {
+  background-color: #007c85;
+}
+
 
 
 @media (max-width: 768px) {
@@ -377,6 +458,65 @@ h1 {
 
   .hamburger {
     display: none;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .project-section {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 80px 30px;
+  }
+
+  .card-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .card-content p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-section {
+    padding: 60px 20px;
+    gap: 1.5rem;
+  }
+
+  .card-content a {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .project-card img {
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-section {
+    padding: 40px 15px;
+    grid-template-columns: 1fr;
+  }
+
+  .card-content {
+    padding: 1rem;
+  }
+
+  .card-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .card-content p {
+    font-size: 0.9rem;
+  }
+
+  .card-content a {
+    font-size: 0.85rem;
+  }
+
+  .project-card img {
+    height: 140px;
   }
 }
 
