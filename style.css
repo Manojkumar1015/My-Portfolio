@@ -167,11 +167,11 @@ body{
   animation: fadeInType 3s ease-in-out, typing 5s steps(50, start) forwards infinite alternate, blink 1s ease-in-out infinite;
 }
 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
 h1 {
-  font-size: 2.6rem;
-  animation: logoEntrance 3s ease forwards;
-  color: white;
-  box-shadow: #00f0ff;
+	font-size:2em;
+	margin:0.67em 0;
+	color:#353535;
 }
 
 #typing {
